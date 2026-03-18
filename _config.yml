@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale                   : "en-UK"
-site_theme               : "sunrise" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
 title                    : "Rasmus Mohr Mortensen / Main"
 title_separator          : "-"
 name                     : &name "Rasmus Mohr Mortensen"
@@ -23,7 +23,7 @@ repository               : "rasmusmohrmortensen/rasmusmohrmortensen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "IMG_0634.JPG"#"profile.png"
+  avatar           : "IMG_0634b.JPG"#"profile.png"
   name             : "Rasmus Mohr Mortensen"
   pronouns         : # example: "she/her"  
   bio              : "Movement ecologist"
