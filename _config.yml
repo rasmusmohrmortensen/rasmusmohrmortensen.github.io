@@ -23,7 +23,7 @@ repository               : "rasmusmohrmortensen/rasmusmohrmortensen.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "IMG_0634.JPG"#"profile.png"
   name             : "Rasmus Mohr Mortensen"
   pronouns         : # example: "she/her"  
   bio              : "Movement ecologist"
