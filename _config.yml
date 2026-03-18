@@ -29,7 +29,7 @@ author:
   bio              : "Researcher within movement ecology"
   location         : #"Earth"
   employer         : "Aarhus University"
-  uri              : "https://pure.au.dk/portal/en/persons/rmm@ecos.au.dk/"# URL
+  uri              : #"https://pure.au.dk/portal/en/persons/rmm@ecos.au.dk/"# URL
   email            : "rmm@ecos.au.dk" 
 
   # Academic websites
