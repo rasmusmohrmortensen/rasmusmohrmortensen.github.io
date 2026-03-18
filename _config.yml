@@ -26,8 +26,8 @@ author:
   avatar           : "IMG_0634b.JPG"#"profile.png"
   name             : "Rasmus Mohr Mortensen"
   pronouns         : # example: "she/her"  
-  bio              : "Movement ecologist"
-  location         : "Earth"
+  bio              : "Researcher within movement ecology"
+  location         : #"Earth"
   employer         : "Aarhus University"
   uri              : "https://pure.au.dk/portal/en/persons/rmm@ecos.au.dk/"# URL
   email            : "rmm@ecos.au.dk" 
