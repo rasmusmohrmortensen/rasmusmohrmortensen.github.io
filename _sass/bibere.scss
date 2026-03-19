@@ -96,6 +96,50 @@ $black:         #000000;
   color: $black;
 }
 
+.tag_Thesis {
+  background-color: $primary; // blå
+  color: $white;
+}
+
+.tag_Article {
+  background-color: #2ca02c; // grøn
+  color: $white;
+}
+
+.tag_Paper {
+  background-color: #2ca02c; // grøn
+  color: $white;
+}
+
+.tag_Accepted {
+  background-color: #2ca02c; // grøn
+  color: $white;
+}
+
+.tag_Submitted {
+  background-color: #ff7f0e; // orange
+  color: $white;
+}
+
+.tag_Presentation {
+  background-color: #9467bd; // lilla
+  color: $white;
+}
+
+.tag_Poster {
+  background-color: #9467bd; // lilla
+  color: $white;
+}
+
+.tag_Report {
+  background-color: $primary; // blå
+  color: $white;
+}
+
+.tag_Popular_scientific {
+  background-color: #d62728;  // rød
+  color: $black;
+}
 
 /* .link a {
   display: inline-block;
