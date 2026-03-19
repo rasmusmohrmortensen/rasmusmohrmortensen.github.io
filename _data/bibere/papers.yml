@@ -1,29 +1,48 @@
-paper0013:
+paper0014:
   type: "Submitted"
-  title: "The impact of increased water levels during the reproduction period in a semi-aquatic mammal"
+  title: "Down time: Can ‘inactivity’ in wild animals be determined using accelerometers?"
   venue: "Submitted"
-  year: 9999
+  year: 0000
   authors:
-    - "Marte Stensby Fountain"
-    - "Christian Robstad"
-    - "Hanna Kavli Lodberg-Holm"
+    - "James Redcliffe"
+    - "..."
     - "Rasmus Mohr Mortensen"
-    - "Norith Eckbo"
-    - "Frank Rosell"
+    - "..."
+    - "Rory Paul Wilson"
   links:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
-#    - name: "DOI"
-#      link: "https://doi.org/10.21203/rs.3.rs-7824896/v1"
+    - name: "DOI"
+      link: "https://dx.doi.org/10.2139/ssrn.6113574"
   note: ""
   emphasis: ""
-  extraTags: ""
+  extraTags: "Preprint"
+
+paper0013:
+  type: "Submitted"
+  title: "Understanding mammal avoidance of human settlements"
+  venue: "Submitted"
+  year: 0000
+  authors:
+    - "Jonathan Potts"
+    - "..."
+    - "Rasmus Mohr Mortensen"
+    - "..."
+    - "Christian Rutz"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.22541/au.176037346.60955875/v1"
+  note: ""
+  emphasis: ""
+  extraTags: "Preprint"
 
 paper0012:
   type: "Accepted"
   title: "Increasing forest disturbance enhances habitat suitability for Europa’s large herbivores"
   venue: "Nature Ecology and Evolution"
-  year: 9999
+  year: 0000
   authors:
     - "Julian Oeser"
     - "..."
@@ -43,7 +62,7 @@ paper0011:
   type: "Accepted"
   title: "High resolution data reveal fundamental step and turning points in animal movements"
   venue: "Ecological Monographs"
-  year: 9999
+  year: 0000
   authors:
     - "Richard Gunner"
     - "..."
@@ -100,9 +119,9 @@ paper0008:
   venue: "Science of the Total Environment"
   year: 2025
   authors:
-    - "Laura Bonnefond*"
-    - "Martin Mayer*"
-    - "Rasmus Mohr Mortensen*"
+    - "Laura Bonnefond"
+    - "Martin Mayer"
+    - "Rasmus Mohr Mortensen"
     - "Lars Haugaard"
     - "Peter Sunde"
   links:
@@ -110,7 +129,7 @@ paper0008:
 #      link: "/files/paper.pdf"
     - name: "DOI"
       link: "https://doi.org/10.1016/j.scitotenv.2025.179008"
-  note: "*Equal contributors"
+  note: "*LB, MM, and RMM are equal contributors"
   emphasis: ""
   extraTags: "Open Access"
 
