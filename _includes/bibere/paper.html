@@ -28,6 +28,8 @@
             {%- else -%}
                 ,&nbsp;
             {%- endif -%}
+        <!-- Year -->
+        <span class="year">{{ paper.year }}</span>
         {%- endfor -%}
         <!-- Title -->
         {%- assign clean_title = paper.title | replace: "}", '' | strip_newlines -%}
@@ -43,8 +45,6 @@
                 {{ paper.venue }}
             {%- endif -%}:
         </span>
-        <!-- Year -->
-        <span class="year">{{ paper.year }}</span>
         <!-- Tag -->
         <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
         {%- for tag in paper.extraTags -%}
