@@ -1,0 +1,86 @@
+{%- assign paper = site.data.bibere.papers[include.pid] -%}
+{%- if paper -%}
+  {%- capture clean_id -%}
+    {{ include.pid | replace: ":", "_" | replace: "-", "_" }}
+  {%- endcapture -%}
+
+  <li class="pub-item" id="{{ clean_id }}">
+
+    <!-- Authors -->
+    <span class="authors">
+    {%- for a in paper.authors -%}
+      {%- assign author = site.data.bibere.authors[a] -%}
+      {%- if a == include.mainAuthor -%}
+        <strong>
+      {%- endif -%}
+
+      {%- if author -%}
+        {%- if author.website -%}
+          <a href="{{ author.website }}">{{ author.name.first }} {{ author.name.last }}</a>
+        {%- else -%}
+          {{ author.name.first }} {{ author.name.last }}
+        {%- endif -%}
+      {%- else -%}
+        {{ a }}
+      {%- endif -%}
+
+      {%- if a == include.mainAuthor -%}</strong>{%- endif -%}
+      {%- if forloop.last == false -%}, {% endif -%}
+    {%- endfor -%}
+    </span>
+
+    <!-- Year -->
+    <span class="year">({{ paper.year }})</span>
+
+    <!-- Title -->
+    <span class="title"> {{ paper.title }}.</span>
+
+    <!-- Venue -->
+    <span class="venue"><em>{{ paper.venue }}</em>.</span>
+
+    <!-- Links -->
+    {%- if paper.links -%}
+      <span class="links">
+      [
+      {%- for item in paper.links -%}
+        <a href="{{ item.link }}">{{ item.name }}</a>{% if forloop.last == false %}, {% endif %}
+      {%- endfor -%}
+      ]
+      </span>
+    {%- endif -%}
+
+    <!-- Notes & Emphasis -->
+    {%- if paper.emphasis -%}
+      <div class="emphasisNote">{{ paper.emphasis }}</div>
+    {%- endif -%}
+    {%- if paper.note -%}
+      <div class="note">{{ paper.note }}</div>
+    {%- endif -%}
+
+    <!-- Abstract -->
+    {%- if paper.abstract -%}
+      <a class="collapse-clicker" onclick="$('#{{ clean_id }}_abstract').slideToggle(200)">Abstract</a>
+      <div class="collapse" id="{{ clean_id }}_abstract">
+        <div class="panel panel-primary">
+          <div class="panel-body details-panel">
+            {{ paper.abstract }}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- BibTex -->
+    <a class="collapse-clicker" onclick="$('#{{ clean_id }}_bibtex').slideToggle(200)">BibTex</a>
+    <div class="collapse" id="{{ clean_id }}_bibtex">
+      <div class="panel panel-info">
+        <pre class="panel-body details-panel">
+{%- include bibere/bibtex.html pid=include.pid -%}
+        </pre>
+      </div>
+    </div>
+
+  </li>
+{%- else -%}
+  <p class="text-danger">Paper with id {{include.pid}} not found!</p>
+  {{ error.standard_error }}
+{%- endif -%}
