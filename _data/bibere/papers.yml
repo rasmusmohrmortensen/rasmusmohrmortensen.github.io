@@ -1,3 +1,59 @@
+paper0009:
+  type: "Article"
+  title: "Long-term hazel dormouse (<i>Muscardinus avellanarius</i>) population dynamics: distinct population growth periods continue for several years"
+  venue: "European Journal of Wildlife Research"
+  year: 2025
+  authors:
+    - "Rimvydas Juškaitis"
+    - "Rasmus Mohr Mortensen"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1007/s10344-025-01936-1"
+  note: ""
+  emphasis: ""
+  extraTags: "pdf can be provided"
+
+paper0008:
+  type: "Article"
+  title: "Red deer in unconfined nature areas have smaller ranges and move less than red deer in unconfined areas"
+  venue: "Science of the Total Environment"
+  year: 2025
+  authors:
+    - "Laura Bonnefond"
+    - "Martin Mayer"
+    - "Rasmus Mohr Mortensen"
+    - "Lars Haugaard"
+    - "Peter Sunde"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1016/j.scitotenv.2025.179008"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0007:
+  type: "Article"
+  title: "Dune hares: Home range size and habitat selection of the European hare on a Danish island"
+  venue: "Ecology and Evolution"
+  year: 2024
+  authors:
+    - "Majbrit Högberg Kleist"
+    - "Rasmus Mohr Mortensen"
+    - "Thomas Bregnballe"
+    - "Martin Mayer"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1002/ece3.70415"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
 paper0006:
   type: "Article"
   title: "Human avoidance, selection for darkness and prey activity explain wolf diel activity in a highly cultivated landscape"
