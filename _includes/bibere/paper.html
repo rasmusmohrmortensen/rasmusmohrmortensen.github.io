@@ -28,9 +28,9 @@
             {%- else -%}
                 ,&nbsp;
             {%- endif -%}
-        <!-- Year -->
-        <span class="year">{{ paper.year }}</span>
         {%- endfor -%}
+        <!-- Year -->
+        (<span class="year">{{ paper.year }}</span>)
         <!-- Title -->
         {%- assign clean_title = paper.title | replace: "}", '' | strip_newlines -%}
         <span class="title">{{ clean_title | replace: "{", '' }}.</span>
