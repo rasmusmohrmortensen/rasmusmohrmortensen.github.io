@@ -6,19 +6,23 @@
 
   <li class="pub-item" id="{{ clean_id }}">
 
-    <!-- Authors -->
+    <!-- Authors: Efternavn, Initialer -->
     <span class="authors">
     {%- for a in paper.authors -%}
       {%- assign author = site.data.bibere.authors[a] -%}
-      {%- if a == include.mainAuthor -%}
-        <strong>
-      {%- endif -%}
+      
+      {%- comment -%} Fremhæv mainAuthor i bold {%- endcomment -%}
+      {%- if a == include.mainAuthor -%}<strong>{%- endif -%}
 
       {%- if author -%}
+        {%- assign first_initials = "" -%}
+        {%- for part in author.name.first | split: " " -%}
+          {%- assign first_initials = first_initials | append: part | slice: 0,1 | append: "." -%}
+        {%- endfor -%}
         {%- if author.website -%}
-          <a href="{{ author.website }}">{{ author.name.first }} {{ author.name.last }}</a>
+          <a href="{{ author.website }}">{{ author.name.last }}, {{ first_initials }}</a>
         {%- else -%}
-          {{ author.name.first }} {{ author.name.last }}
+          {{ author.name.last }}, {{ first_initials }}
         {%- endif -%}
       {%- else -%}
         {{ a }}
@@ -33,28 +37,39 @@
     <span class="year">({{ paper.year }})</span>
 
     <!-- Title -->
-    <span class="title"> {{ paper.title }}.</span>
+    <span class="title">{{ paper.title }}.</span>
 
     <!-- Venue -->
     <span class="venue"><em>{{ paper.venue }}</em>.</span>
 
-    <!-- Links -->
-    {%- if paper.links -%}
-      <span class="links">
-      [
-      {%- for item in paper.links -%}
-        <a href="{{ item.link }}">{{ item.name }}</a>{% if forloop.last == false %}, {% endif %}
-      {%- endfor -%}
-      ]
-      </span>
-    {%- endif -%}
+    <!-- Type & Tags -->
+    <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
+    {%- for tag in paper.extraTags -%}
+      <span class="tag_{{ tag }} tag label label-default">{{ tag }}</span>
+    {%- endfor -%}
 
-    <!-- Notes & Emphasis -->
+    <!-- Notes / Emphasis -->
     {%- if paper.emphasis -%}
       <div class="emphasisNote">{{ paper.emphasis }}</div>
     {%- endif -%}
     {%- if paper.note -%}
       <div class="note">{{ paper.note }}</div>
+    {%- endif -%}
+
+    <!-- Links -->
+    {%- if paper.links -%}
+      <div class="links">
+        [
+        {%- for item in paper.links -%}
+          {% assign link_first_char = item.link | slice:0,1 %}
+          {%- if link_first_char == "/" and site.bibere.file_base_url -%}
+            <a href="{{ site.bibere.file_base_url }}{{ item.link }}">{{ item.name }}</a>{% if forloop.last == false %}, {% endif %}
+          {%- else -%}
+            <a href="{{ item.link }}">{{ item.name }}</a>{% if forloop.last == false %}, {% endif %}
+          {%- endif -%}
+        {%- endfor -%}
+        ]
+      </div>
     {%- endif -%}
 
     <!-- Abstract -->
