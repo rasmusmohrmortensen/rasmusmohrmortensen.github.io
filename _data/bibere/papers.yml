@@ -1,3 +1,135 @@
+paper0006:
+  type: "Article"
+  title: "Human avoidance, selection for darkness and prey activity explain wolf diel activity in a highly cultivated landscape"
+  venue: "Wildlife Biology"
+  year: 2024
+  authors:
+    - "Peter Sunde"
+    - "Sofie Amund Kjeldgaard"
+    - "Rasmus Mohr Mortensen"
+    - "Kent Olsen"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1002/wlb3.01251"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+PHD:
+  type: "Thesis"
+  title: "Territorial movement behaviour in the Eurasian beaver"
+  venue: "Doctoral dissertation no. 162, University of South-Eastern Norway"
+  year: 2023
+  authors:
+    - "Rasmus Mohr Mortensen"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://hdl.handle.net/11250/3069039"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0005:
+  type: "Article"
+  title: "Hazel dormouse in managed woodland select for young, dense, and species-rich tree stands"
+  venue: "Forest Ecology and Management"
+  year: 2022
+  authors:
+    - "Rasmus Mohr Mortensen"
+    - "Michelle Fyrstelin Fuller"
+    - "Lars Dalby"
+    - "Thomas Bjørneboe Berg"
+    - "Peter Sunde"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1016/j.foreco.2022.120348"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0004:
+  type: "Article"
+  title: "Temperature and barometric pressure affect the activity intensity and movement of an endangered thermoconforming lizard"
+  venue: "Ecosphere"
+  year: 2022
+  authors:
+    - "Daniel Ariano-Sánchez"
+    - "Rasmus Mohr Mortensen"
+    - "Rory Paul Wilson"
+    - "Peder Bjureke"
+    - "Stefanie Reinhardt"
+    - "Frank Rosell"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1002/ecs2.3990"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0003:
+  type: "Article"
+  title: "Aquatic habitat use in a semi-aquatic mammal: the Eurasian beaver"
+  venue: "Animal Biotelemetry"
+  year: 2021
+  authors:
+    - "Rasmus Mohr Mortensen"
+    - "Stefanie Reinhardt"
+    - "Marina Eraker Hjønnevåg"
+    - "Rory Paul Wilson"
+    - "Frank Rosell"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1186/s40317-021-00259-7"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0002:
+  type: "Article"
+  title: "Long-term capture and handling effects on body condition, reproduction, and survival in a semi-aquatic mammal"
+  venue: "Scientific Reports"
+  year: 2020
+  authors:
+    - "Rasmus Mohr Mortensen"
+    - "Frank Rosell"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1038/s41598-020-74933-w"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
+paper0001:
+  type: "Article"
+  title: "Escaping drought: seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
+  venue: "Global Ecology and Conservation"
+  year: 2020
+  authors:
+    - "Daniel Ariano-Sánchez"
+    - "Rasmus Mohr Mortensen"
+    - "Stefanie Reinhardt"
+    - "Frank Rosell"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1016/j.gecco.2020.e01178"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
 MSc:
   type: "Thesis"
   title: "Habitat selection of the common dormouse <i>Muscardinus avellanarius</i> in Denmark"
@@ -13,43 +145,3 @@ MSc:
   note: ""
   emphasis: ""
   extraTags: ""
-
-paper1:
-  type: "Journal"
-  title: "Escaping drought: seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
-  venue: "Global Ecology and Conservation"
-  year: 2020
-  authors:
-    - "Daniel Ariano-Sánchez"
-    - "Rasmus Mohr Mortensen"
-    - "Stefanie Reinhardt"
-    - "Frank Rosell"
-  links:
-    - name: "PDF"
-#      link: "/files/paper.pdf"
-    - name: "DOI"
-      link: "https://doi.org/10.1016/j.gecco.2020.e01178"
-  note: ""
-  emphasis: ""
-  extraTags: "Open Access"
-
-paper2:
-  type: "Journal"
-  title: "Temperature and barometric pressure affect the activity intensity and movement of an endangered thermoconforming lizard"
-  venue: "Ecosphere"
-  year: 2022
-  authors:
-    - "Daniel Ariano-Sánchez"
-    - "Rasmus Mohr Mortensen"
-    - "Rory Paul Wilson"
-    - "Peder Bjureke"
-    - "Stefanie Reinhardt"
-    - "Frank Rosell"
-  links:
-    - name: "PDF"
-#      link: "/files/paper.pdf"
-    - name: "DOI"
-      link: "https://doi.org/10.1002/ecs2.3990"
-  note: ""
-  emphasis: ""
-  extraTags: "Open Access"
