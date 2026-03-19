@@ -1,8 +1,28 @@
+paper0012:
+  type: "Accepted"
+  title: "Increasing forest disturbance enhances habitat suitability for Europa’s large herbivores"
+  venue: "Nature Ecology and Evolution"
+  year: tba
+  authors:
+    - "Julian Oeser"
+    - "..."
+    - "Rasmus Mohr Mortensen"
+    - "..."
+    - "Tobias Kuemmerle"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.21203/rs.3.rs-7824896/v1"
+  note: ""
+  emphasis: ""
+  extraTags: "Preprint"
+
 paper0011:
   type: "Accepted"
   title: "High resolution data reveal fundamental step and turning points in animal movements"
   venue: "Ecological Monographs"
-  year: 2026
+  year: tba
   authors:
     - "Richard Gunner"
     - "..."
