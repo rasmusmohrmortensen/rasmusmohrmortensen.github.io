@@ -1,21 +1,39 @@
 paper1:
+  type: "Journal"
   title: "Escaping drought: seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
   venue: "Global Ecology and Conservation"
+  year: 2020
   authors:
     - "Daniel Ariano-Sánchez"
     - "Rasmus Mohr Mortensen"
     - "Stefanie Reinhardt"
     - "Frank Rosell"
-  type: "Journal"
-  year: 2020
+  links:
+    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1016/j.gecco.2020.e01178"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
 
 paper2:
-  title: "Test2"
-  venue: "Scientific journal2"
-  authors:
-    - "Rasmus Mohr Mortensen"
-    - "Author 1"
-    - "Author 2"
-    - "Author 3"
   type: "Journal"
-  year: 2020
+  title: "Temperature and barometric pressure affect the activity intensity and movement of an endangered thermoconforming lizard"
+  venue: "Ecosphere"
+  year: 2022
+  authors:
+    - "Daniel Ariano-Sánchez"
+    - "Rasmus Mohr Mortensen"
+    - "Rory Paul Wilson"
+    - "Peder Bjureke"
+    - "Stefanie Reinhardt"
+    - "Frank Rosell"
+  links:
+    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1002/ecs2.3990"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
