@@ -1,3 +1,24 @@
+paper0013:
+  type: "Submitted"
+  title: "The impact of increased water levels during the reproduction period in a semi-aquatic mammal"
+  venue: "Submitted"
+  year: 9999
+  authors:
+    - "Marte Stensby Fountain"
+    - "Christian Robstad"
+    - "Hanna Kavli Lodberg-Holm"
+    - "Rasmus Mohr Mortensen"
+    - "Norith Eckbo"
+    - "Frank Rosell"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+#    - name: "DOI"
+#      link: "https://doi.org/10.21203/rs.3.rs-7824896/v1"
+  note: ""
+  emphasis: ""
+  extraTags: ""
+
 paper0012:
   type: "Accepted"
   title: "Increasing forest disturbance enhances habitat suitability for Europa’s large herbivores"
