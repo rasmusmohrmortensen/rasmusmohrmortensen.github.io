@@ -1,9 +1,18 @@
-- title: "Escaping drought: Seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
-  venue: "Global Ecology and Conservation"
+- title: "Test"
+  venue: "Scientific journal"
   authors:
-    - "Daniel Ariano-Sanchez"
+    - "Author 1"
     - "Rasmus Mohr Mortensen"
-    - "Stefanie Reinhardt"
-    - "Frank Rosell"
+    - "Author 2"
+    - "Author 3"
+  type: "Journal"
+  year: 2020
+- title: "Test"
+  venue: "Scientific journal"
+  authors:
+    - "Rasmus Mohr Mortensen"
+    - "Author 1"
+    - "Author 2"
+    - "Author 3"
   type: "Journal"
   year: 2020
