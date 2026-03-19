@@ -1,3 +1,41 @@
+paper0011:
+  type: "Accepted"
+  title: "High resolution data reveal fundamental step and turning points in animal movements"
+  venue: "Ecological Monographs"
+  year: 2026
+  authors:
+    - "Richard Gunner"
+    - "..."
+    - "Rasmus Mohr Mortensen"
+    - "..."
+    - "Jonathan Potts"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.21203/rs.3.rs-5559169/v1"
+  note: ""
+  emphasis: ""
+  extraTags: "Preprint"
+
+paper0010:
+  type: "Article"
+  title: "New to town: home range size, habitat selection and behavioral adaptations by urban hares"
+  venue: "Wildlife Biology"
+  year: 2025
+  authors:
+    - "Martin Mayer"
+    - "Rasmus Mohr Mortensen"
+    - "Peter Sunde"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1002/wlb3.01513"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
 paper0009:
   type: "Article"
   title: "Long-term hazel dormouse (<i>Muscardinus avellanarius</i>) population dynamics: distinct population growth periods continue for several years"
@@ -5,7 +43,7 @@ paper0009:
   year: 2025
   authors:
     - "Rimvydas Juškaitis"
-    - "<b>Rasmus Mohr Mortensen</b>"
+    - "Rasmus Mohr Mortensen"
   links:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
