@@ -41,7 +41,7 @@
                 {{ venue.name }}
             {%- else -%}
                 {{ paper.venue }}
-            {%- endif -%}.
+            {%- endif -%}:
         </span>
         <!-- Year -->
         <span class="year">{{ paper.year }}</span>
@@ -63,9 +63,9 @@
             {%- for item in paper.links -%} 
                 {% assign link_first_char = item.link | slice:0,1 %}
                 {%- if link_first_char == "/" and site.bibere.file_base_url -%}
-                    <a href="{{ site.bibere.file_base_url }}{{item.link}}">{{item.name}}</a>,
+                    &nbsp;<a href="{{ site.bibere.file_base_url }}{{item.link}}">{{item.name}}</a>,
                 {%- else -%}
-                    <a href="{{item.link}}">{{item.name}}</a>,
+                    &nbsp;<a href="{{item.link}}">{{item.name}}</a>,
                 {%- endif -%}
             {%- endfor -%}
         {%- endif -%}
