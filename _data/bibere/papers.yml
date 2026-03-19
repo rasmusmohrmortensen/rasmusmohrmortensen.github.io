@@ -1,3 +1,19 @@
+MSc:
+  type: "Thesis"
+  title: "Habitat selection of the common dormouse <i>Muscardinus avellanarius</i> in Denmark"
+  venue: "Master's thesis, Aarhus University"
+  year: 2014
+  authors:
+    - "Rasmus Mohr Mortensen"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+#    - name: "DOI"
+#      link: "https://doi.org/10.1016/j.gecco.2020.e01178"
+  note: ""
+  emphasis: ""
+  extraTags: ""
+
 paper1:
   type: "Journal"
   title: "Escaping drought: seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
