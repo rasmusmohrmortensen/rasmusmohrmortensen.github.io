@@ -79,9 +79,9 @@ paper0008:
   venue: "Science of the Total Environment"
   year: 2025
   authors:
-    - "Laura Bonnefond"
-    - "Martin Mayer"
-    - "Rasmus Mohr Mortensen"
+    - "Laura Bonnefond"*
+    - "Martin Mayer"*
+    - "Rasmus Mohr Mortensen"*
     - "Lars Haugaard"
     - "Peter Sunde"
   links:
@@ -89,7 +89,7 @@ paper0008:
 #      link: "/files/paper.pdf"
     - name: "DOI"
       link: "https://doi.org/10.1016/j.scitotenv.2025.179008"
-  note: ""
+  note: "*Equal contributors"
   emphasis: ""
   extraTags: "Open Access"
 
