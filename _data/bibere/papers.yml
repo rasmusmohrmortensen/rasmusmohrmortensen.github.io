@@ -79,9 +79,9 @@ paper0008:
   venue: "Science of the Total Environment"
   year: 2025
   authors:
-    - "Laura Bonnefond"*
-    - "Martin Mayer"*
-    - "Rasmus Mohr Mortensen"*
+    - "Laura Bonnefond*"
+    - "Martin Mayer*"
+    - "Rasmus Mohr Mortensen*"
     - "Lars Haugaard"
     - "Peter Sunde"
   links:
