@@ -1,10 +1,9 @@
-thumbs:emnlp02:
-  title: "Escaping drought: Seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
-  venue: Global Ecology and Conservation
+- title: "Escaping drought: Seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
+  venue: "Global Ecology and Conservation"
   authors:
-    - Daniel Ariano-Sanchez
-    - Rasmus Mohr Mortensen
-    - Stefanie Reinhardt
-    - Frank Rosell
-  type: Journal
+    - "Daniel Ariano-Sanchez"
+    - "Rasmus Mohr Mortensen"
+    - "Stefanie Reinhardt"
+    - "Frank Rosell"
+  type: "Journal"
   year: 2020
