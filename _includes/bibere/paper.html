@@ -33,7 +33,7 @@
         (<span class="year">{{ paper.year }}</span>)
         <!-- Title -->
         {%- assign clean_title = paper.title | replace: "}", '' | strip_newlines -%}
-        <span class="title">{{ clean_title | replace: "{", '' }}.</span>
+        <span class="title">{{ clean_title | replace: "{", '' }}</span>
         <!-- Venue -->
         <span class="venue">
             {%- assign venue = site.data.bibere.venues[paper.venue] -%}
