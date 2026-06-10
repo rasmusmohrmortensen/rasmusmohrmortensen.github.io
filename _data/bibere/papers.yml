@@ -59,9 +59,9 @@ paper0012:
   extraTags: "Preprint"
 
 paper0011:
-  type: "Accepted"
+  type: "Article"
   title: "High resolution data reveal fundamental step and turning points in animal movements"
-  venue: "Submitted"
+  venue: "Ecological Monographs"
   year: 2026
   authors:
     - "Richard Gunner"
@@ -73,10 +73,10 @@ paper0011:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
     - name: "DOI"
-      link: "https://doi.org/10.21203/rs.3.rs-5559169/v1"
+      link: "https://doi.org/10.1002/ecm.70069"
   note: ""
   emphasis: ""
-  extraTags: "Preprint"
+  extraTags: "Open Access"
 
 paper0010:
   type: "Article"
