@@ -1,3 +1,24 @@
+paper0015:
+  type: "Submitted"
+  title: "Glue-on tri-axial accelerometers code for different behaviours in Eurasian otters (<i>Lutra lutra</i>)"
+  venue: "Submitted"
+  year: 0000
+  authors:
+    - "Frank Rosell"
+    - "Hanna Kavli Lodberg-Holm"
+    - "Christian A. Robstad"
+    - "Marius Kambestad"
+    - "Rory P. Wilson"
+    - "Rasmus Mohr Mortensen"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.21203/rs.3.rs-9777806/v1"
+  note: ""
+  emphasis: ""
+  extraTags: "Preprint"
+
 paper0014:
   type: "Submitted"
   title: "Down time: Can ‘inactivity’ in wild animals be determined using accelerometers?"
