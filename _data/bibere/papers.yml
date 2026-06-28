@@ -60,9 +60,9 @@ paper0013:
   extraTags: "Preprint"
 
 paper0012:
-  type: "Accepted"
+  type: "Article"
   title: "Increasing forest disturbance enhances habitat suitability for Europe’s large herbivores"
-  venue: "Submitted"
+  venue: "Nature Ecology & Evolution"
   year: 2026
   authors:
     - "Julian Oeser"
@@ -74,10 +74,10 @@ paper0012:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
     - name: "DOI"
-      link: "https://doi.org/10.21203/rs.3.rs-7824896/v1"
+      link: "https://doi.org/10.1038/s41559-026-03096-0"
   note: ""
   emphasis: ""
-  extraTags: "Preprint"
+  extraTags: "Open Access"
 
 paper0011:
   type: "Article"
