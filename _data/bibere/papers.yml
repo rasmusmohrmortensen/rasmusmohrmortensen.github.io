@@ -40,9 +40,9 @@ paper0014:
   extraTags: "Preprint"
 
 paper0013:
-  type: "Accepted"
+  type: "Article"
   title: "Understanding mammal avoidance of human settlements"
-  venue: "Submitted"
+  venue: "Journal of Animal Ecology"
   year: 2026
   authors:
     - "Jonathan Potts"
@@ -54,10 +54,10 @@ paper0013:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
     - name: "DOI"
-      link: "https://doi.org/10.22541/au.176037346.60955875/v1"
+      link: "https://doi.org/10.1111/1365-2656.70298"
   note: ""
   emphasis: ""
-  extraTags: "Preprint"
+  extraTags: "Open Access"
 
 paper0012:
   type: "Article"
