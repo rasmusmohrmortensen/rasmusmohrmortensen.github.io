@@ -1,4 +1,4 @@
-paper0015:
+paper0016:
   type: "Submitted"
   title: "Glue-on tri-axial accelerometers code for different behaviours in Eurasian otters (<i>Lutra lutra</i>)"
   venue: "Submitted"
@@ -19,16 +19,18 @@ paper0015:
   emphasis: ""
   extraTags: "Preprint"
 
-paper0014:
+paper0015:
   type: "Submitted"
   title: "Down time: Can ‘inactivity’ in wild animals be determined using accelerometers?"
   venue: "Submitted"
   year: 0000
   authors:
     - "James Redcliffe"
+    - "Jesse T. Boulerice"
     - "..."
     - "Rasmus Mohr Mortensen"
     - "..."
+    - "Joshua P. Twining"
     - "Rory Paul Wilson"
   links:
 #    - name: "PDF"
@@ -39,6 +41,30 @@ paper0014:
   emphasis: ""
   extraTags: "Preprint"
 
+paper0014:
+  type: "Article"
+  title: "Integrating natural baselines into ecosystem restoration: Scaling herbivore targets for European landscapes"
+  venue: "Restoration Ecology"
+  year: 2026
+  authors:
+    - "Camilla Fløjgaard"
+    - "Robert Buitenwerf"
+    - "Alessandro Chiarucci"
+    - "Martin Konvicka"
+    - "Rasmus Mohr Mortensen"
+    - "Norman Owen-Smith"
+    - "Deli Saavedra"
+    - "Jens-Christian Svenning"
+    - "Rasmus Ejrnæs"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+    - name: "DOI"
+      link: "https://doi.org/10.1111/rec.70508"
+  note: ""
+  emphasis: ""
+  extraTags: "Open Access"
+
 paper0013:
   type: "Article"
   title: "Understanding mammal avoidance of human settlements"
@@ -46,9 +72,11 @@ paper0013:
   year: 2026
   authors:
     - "Jonathan Potts"
+    - "Luca Börger"
     - "..."
     - "Rasmus Mohr Mortensen"
     - "..."
+    - "George Wittemyer"
     - "Christian Rutz"
   links:
 #    - name: "PDF"
@@ -66,9 +94,11 @@ paper0012:
   year: 2026
   authors:
     - "Julian Oeser"
+    - "Rafał Kowalczyk"
     - "..."
     - "Rasmus Mohr Mortensen"
     - "..."
+    - "Aleksandra Wołoszyn-Gałęza"
     - "Tobias Kuemmerle"
   links:
 #    - name: "PDF"
@@ -85,11 +115,13 @@ paper0011:
   venue: "Ecological Monographs"
   year: 2026
   authors:
-    - "Richard Gunner"
+    - "Richard M. Gunner"
+    - "Rory P. Wilson"
     - "..."
     - "Rasmus Mohr Mortensen"
     - "..."
-    - "Jonathan Potts"
+    - "Juan M. Morales"
+    - "Jonathan R. Potts"
   links:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
