@@ -227,7 +227,7 @@ paper0006:
 PHD:
   type: "Thesis"
   title: "Territorial movement behaviour in the Eurasian beaver"
-  venue: "Doctoral dissertation no. 162, University of South-Eastern Norway"
+  venue: "PhD thesis in Ecology, Doctoral dissertation no. 162, University of South-Eastern Norway"
   year: 2023
   authors:
     - "Rasmus Mohr Mortensen"
@@ -340,7 +340,7 @@ paper0001:
 MSc:
   type: "Thesis"
   title: "Habitat selection of the common dormouse <i>Muscardinus avellanarius</i> in Denmark"
-  venue: "Master's thesis, Aarhus University"
+  venue: "Master's thesis in Biology, Aarhus University"
   year: 2014
   authors:
     - "Rasmus Mohr Mortensen"
