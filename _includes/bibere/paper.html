@@ -37,7 +37,7 @@
         <!-- Venue -->
         <span class="venue">
             {%- assign venue = site.data.bibere.venues[paper.venue] -%}
-            {%- if paper.type == "Thesis" -%}Thesis,&nbsp;{%- endif -%}
+            {%- if paper.type == "Thesis" -%};{%- endif -%}
             {%- if paper.type == "TechReport" -%}Technical Report,&nbsp;{%- endif -%}
             {%- if venue -%}
                 {{ venue.name }}
