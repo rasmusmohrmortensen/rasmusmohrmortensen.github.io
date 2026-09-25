@@ -183,8 +183,8 @@ paper0009:
     - "Rimvydas Juškaitis"
     - "Rasmus Mohr Mortensen"
   links:
-#    - name: "PDF"
-#      link: "/files/paper.pdf"
+    - name: "PDF"
+      link: "https://pure.au.dk/portal/files/469060123/Juskaitis_and_Mortensen_2025_accepted_version.pdf"
     - name: "DOI"
       link: "https://doi.org/10.1007/s10344-025-01936-1"
   note: ""
