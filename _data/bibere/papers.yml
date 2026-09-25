@@ -1,3 +1,28 @@
+paper0017:
+  type: "Article"
+  title: "Forest cover and coexistence modulate wolf nocturnality and temporal human avoidance across southern Europe"
+  venue: "Wildlife Biology"
+  year: 2026
+  authors:
+    - "Dário Hipólito"
+    - "Rasmus Mohr Mortensen"
+    - "Michael Schulte"
+    - "Gonçalo Ferrão da Costa"
+    - "Patricia Teixeira"
+    - "Miguel Mascarenhas"
+    - "Carlos Fonseca"
+    - "Peter Sunde"
+    - "Josip Kusak"
+    - "Rita T. Torres"
+  links:
+#    - name: "PDF"
+#      link: "/files/paper.pdf"
+#    - name: "DOI"
+#      link: "https://doi.org/10.1016/j.scitotenv.2025.179008"
+  note: "*DH and RMM are equal contributors"
+  emphasis: ""
+  extraTags: "Accepted"
+
 paper0016:
   type: "Submitted"
   title: "Glue-on tri-axial accelerometers code for different behaviours in Eurasian otters (<i>Lutra lutra</i>)"
