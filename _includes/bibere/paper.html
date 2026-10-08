@@ -118,19 +118,3 @@
     <p class="text-danger">Paper with id {{include.pid}} not found!</p>
     {{ error.standard_error }}
 {%- endif -%}
-3. Og så den vigtige CSS
-Det er CSS'en, der giver dig punktet •. Vi skal derfor skjule punktet på .papers, men beholde vores eget nummer.
-
-Tilføj dette til din CSS-fil:
-
-.papers {
-    list-style: none;
-    padding-left: 0;
-}
-
-.paperNumber {
-    display: inline-block;
-    width: 35px;
-    margin-right: 5px;
-    text-align: right;
-}
