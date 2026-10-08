@@ -24,10 +24,10 @@ paper0017:
   extraTags: "Accepted"
 
 paper0016:
-  type: "Submitted"
+  type: "Article"
   title: "Glue-on tri-axial accelerometers code for different behaviours in Eurasian otters (<i>Lutra lutra</i>)"
-  venue: "Submitted"
-  year: 0000
+  venue: "Animal Biotelemetry"
+  year: 2026
   authors:
     - "Frank Rosell"
     - "Hanna Kavli Lodberg-Holm"
@@ -39,10 +39,10 @@ paper0016:
 #    - name: "PDF"
 #      link: "/files/paper.pdf"
     - name: "DOI"
-      link: "https://doi.org/10.21203/rs.3.rs-9777806/v1"
+      link: "https://doi.org/10.1186/s40317-026-00504-x"
   note: ""
   emphasis: ""
-  extraTags: "Preprint"
+  extraTags: "Open Access"
 
 paper0015:
   type: "Submitted"
