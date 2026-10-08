@@ -27,10 +27,15 @@
             {%- endif -%}
             </span>
 
-            {%- if forloop.last == true -%}
-            {%- else -%}
-                ,&nbsp;
-            {%- endif -%}
+            {%- assign secondLast = paper.authors.size | minus: 1 -%}
+
+{%- if forloop.last -%}
+    
+{%- elsif forloop.index == secondLast -%}
+    , and&nbsp;
+{%- else -%}
+    ,&nbsp;
+{%- endif -%}
         {%- endfor -%}
 
         <!-- Year -->
