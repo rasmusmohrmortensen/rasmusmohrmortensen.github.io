@@ -3,7 +3,10 @@
     {%- capture clean_id -%}
     {{ include.pid | replace: ":", "_" | replace: "-", "_" }}
     {%- endcapture -%}
-    <div id="{{ clean_id }}">
+
+    <li id="{{ clean_id }}">
+        <span class="paperNumber">{{ include.number }}.</span>
+
         <!-- Author -->
         {%- for a in paper.authors -%}
             {%- assign author = site.data.bibere.authors[a] -%}
@@ -12,6 +15,7 @@
             {%- else -%}
                 {%- assign authorClass = "author" -%}
             {%- endif -%}
+
             <span class="{{ authorClass }}">
             {%- if author -%}
                 {%- if author.website -%}
@@ -23,8 +27,8 @@
                 {{ a }}
             {%- endif -%}
             </span>
+
             {%- if forloop.last == true -%}
-                
             {%- else -%}
                 ,&nbsp;
             {%- endif -%}
@@ -40,8 +44,9 @@
         <!-- Venue -->
         <span class="venue">
             {%- assign venue = site.data.bibere.venues[paper.venue] -%}
-            {%- if paper.type == "Thesis" -%}{%- endif -%}
-            {%- if paper.type == "TechReport" -%}Technical Report,&nbsp;{%- endif -%}
+            {%- if paper.type == "TechReport" -%}
+                Technical Report,&nbsp;
+            {%- endif -%}
             {%- if venue -%}
                 {{ venue.name }}
             {%- else -%}
@@ -51,6 +56,7 @@
 
         <!-- Tag -->
         <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
+
         {%- for tag in paper.extraTags -%}
             <span class="tag_{{ tag }} tag label label-default">{{ tag }}</span>
         {%- endfor -%}
@@ -59,6 +65,7 @@
         {%- if paper.emphasis -%}
         <span class="emphasisNote">{{ paper.emphasis }}</span>
         {%- endif -%}
+
         {%- if paper.note -%}
         <span class="note">{{ paper.note }}</span>
         {%- endif -%}
@@ -66,7 +73,7 @@
         <!-- Links -->
         [
         {%- if paper.links -%}
-            {%- for item in paper.links -%} 
+            {%- for item in paper.links -%}
                 {% assign link_first_char = item.link | slice:0,1 %}
                 {%- if link_first_char == "/" and site.bibere.file_base_url -%}
                     &nbsp;<a href="{{ site.bibere.file_base_url }}{{item.link}}">{{item.name}}</a>,
@@ -101,8 +108,25 @@
                 </pre>
             </div>
         </div>
-    </div>
+    </li>
+
 {%- else -%}
     <p class="text-danger">Paper with id {{include.pid}} not found!</p>
     {{ error.standard_error }}
 {%- endif -%}
+3. Og så den vigtige CSS
+Det er CSS'en, der giver dig punktet •. Vi skal derfor skjule punktet på .papers, men beholde vores eget nummer.
+
+Tilføj dette til din CSS-fil:
+
+.papers {
+    list-style: none;
+    padding-left: 0;
+}
+
+.paperNumber {
+    display: inline-block;
+    width: 35px;
+    margin-right: 5px;
+    text-align: right;
+}
