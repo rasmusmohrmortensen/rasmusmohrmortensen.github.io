@@ -2,10 +2,12 @@
 
 <!-- Create a list of papers filtered by flags -->
 {% assign filtered = '' | split: '' %}
+
 {%- for p in site.data.bibere.papers -%}
     {%- assign numyear = p[1].year | to_integer -%}
+
     {%- if numyear >= minYear -%}
-        {%- if include.filterAuthor %}
+        {%- if include.filterAuthor -%}
             {%- if p[1].authors contains include.filterAuthor -%}
                 {% assign filtered = filtered | push: p %}
             {%- endif -%}
@@ -15,14 +17,17 @@
     {%- endif -%}
 {%- endfor -%}
 
-<!-- Group filtered ones by year, sorted -->
-{% assign years = filtered | group_by_exp: "p", "p[1].year" | sort: "name" | reverse %}
+<!-- Sort all papers by date, newest first -->
+{% assign sortedPapers = filtered | sort: "1.date" | reverse %}
+
+<!-- Get years for navigation -->
+{% assign years = sortedPapers | group_by_exp: "p", "p[1].year" %}
 
 <div>
-Publications (grouped by year): 
+Publications (grouped by year):
 {%- for year in years -%}
     {%- if forloop.first == false -%}
-    , 
+    ,
     {% endif %}
     <a href="#{{ year.name }}">{{ year.name }}</a>
 {%- endfor -%}
@@ -30,28 +35,29 @@ Publications (grouped by year):
 <hr>
 </div>
 
-<!-- Number publications from oldest (1) to newest -->
-{% assign currentNumber = filtered.size %}
+<!-- Display papers in chronological order -->
+{% assign currentNumber = 1 %}
 
-{% for year in years %}
-    <span id="{{ year.name }}" class="yearGroup">{{ year.name }}</span>
-    <ul class="papers">
+{% for p in sortedPapers %}
 
-    {% assign types = year.items | group_by_exp: "p", "p[1].type" | sort: "name" %}
+    {% assign currentYear = p[1].year %}
 
-    {% for type in types %}
-        {% assign weights = type.items | group_by_exp: "p", "p[1].sort_weight" | sort: "name" | reverse %}
+    {% if forloop.first %}
+        <span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span>
+        <ul class="papers">
+    {% elsif currentYear != previousYear %}
+        </ul>
+        <span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span>
+        <ul class="papers">
+    {% endif %}
 
-        {% for weight in weights %}
-            {% for p in weight.items %}
-                {%- assign pid = p[0] -%}
+    {% assign pid = p[0] %}
 
-                {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
+    {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
 
-                {% assign currentNumber = currentNumber | minus: 1 %}
-            {% endfor %}
-        {% endfor %}
-    {% endfor %}
+    {% assign currentNumber = currentNumber | plus: 1 %}
+    {% assign previousYear = currentYear %}
 
-    </ul>
 {% endfor %}
+
+</ul>
