@@ -1,4 +1,5 @@
-{% assign minYear = include.minYear |  to_integer %}
+{% assign minYear = include.minYear | to_integer %}
+
 <!-- Create a list of papers filtered by flags -->
 {% assign filtered = '' | split: '' %}
 {%- for p in site.data.bibere.papers -%}
@@ -13,9 +14,9 @@
         {%- endif -%}
     {%- endif -%}
 {%- endfor -%}
+
 <!-- Group filtered ones by year, sorted -->
-{% assign years = filtered | group_by_exp: "p",
-"p[1].year" | sort: "name" | reverse %}
+{% assign years = filtered | group_by_exp: "p", "p[1].year" | sort: "name" | reverse %}
 
 <div>
 Publications (grouped by year): 
@@ -28,19 +29,33 @@ Publications (grouped by year):
 .
 <hr>
 </div>
-<!-- For each year, sorted by type (alphabetical), then sort_weight -->
+
+<!-- Number all papers continuously, with the oldest paper as number 1 -->
+{% assign totalPapers = filtered.size %}
+{% assign currentNumber = totalPapers %}
+
 {% for year in years %}
     <span id="{{ year.name }}" class="yearGroup">{{ year.name }}</span>
     <ul class="papers">
+
     {% assign types = year.items | group_by_exp: "p", "p[1].type" | sort: "name" %}
+
     {% for type in types %}
         {% assign weights = type.items | group_by_exp: "p", "p[1].sort_weight" | sort: "name" | reverse %}
+
         {% for weight in weights %}
             {% for p in weight.items %}
                 {%- assign pid = p[0] -%}
-                {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor %}
+
+                <li class="paperNumbered">
+                    <span class="paperNumber">{{ currentNumber }}.</span>
+                    {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor %}
+                </li>
+
+                {% assign currentNumber = currentNumber | minus: 1 %}
             {% endfor %}
         {% endfor %}
     {% endfor %}
+
     </ul>
 {% endfor %}
