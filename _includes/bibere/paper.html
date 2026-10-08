@@ -4,8 +4,7 @@
     {{ include.pid | replace: ":", "_" | replace: "-", "_" }}
     {%- endcapture -%}
 
-    <li id="{{ clean_id }}">
-        <span class="paperNumber">{{ include.number }}.</span>
+    <li id="{{ clean_id }}"><span class="paperNumber">{{ include.number }}.</span>
 
         <!-- Author -->
         {%- for a in paper.authors -%}
