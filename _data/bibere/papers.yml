@@ -3,6 +3,7 @@ paper0017:
   title: "Forest cover and coexistence modulate wolf nocturnality and temporal human avoidance across southern Europe"
   venue: "Wildlife Biology"
   year: 2026
+  date: 2026-10-15
   authors:
     - "Dário Hipólito"
     - "Rasmus Mohr Mortensen"
@@ -28,6 +29,7 @@ paper0016:
   title: "Glue-on tri-axial accelerometers code for different behaviours in Eurasian otters (<i>Lutra lutra</i>)"
   venue: "Animal Biotelemetry"
   year: 2026
+  date: 2026-10-08
   authors:
     - "Frank Rosell"
     - "Hanna Kavli Lodberg-Holm"
@@ -49,6 +51,7 @@ paper0015:
   title: "Down time: Can ‘inactivity’ in wild animals be determined using accelerometers?"
   venue: "Submitted"
   year: 2026
+  date: 2026-01-26
   authors:
     - "James Redcliffe"
     - "Jesse T. Boulerice"
@@ -71,6 +74,7 @@ paper0014:
   title: "Integrating natural baselines into ecosystem restoration: Scaling herbivore targets for European landscapes"
   venue: "Restoration Ecology"
   year: 2026
+  date: 2020-08-13
   authors:
     - "Camilla Fløjgaard"
     - "Robert Buitenwerf"
@@ -95,6 +99,7 @@ paper0013:
   title: "Understanding mammal avoidance of human settlements"
   venue: "Journal of Animal Ecology"
   year: 2026
+  date: 2026-07-01
   authors:
     - "Jonathan Potts"
     - "Luca Börger"
@@ -117,6 +122,7 @@ paper0012:
   title: "Increasing forest disturbance enhances habitat suitability for Europe’s large herbivores"
   venue: "Nature Ecology & Evolution"
   year: 2026
+  date: 2026-06-26
   authors:
     - "Julian Oeser"
     - "Rafał Kowalczyk"
@@ -139,6 +145,7 @@ paper0011:
   title: "High resolution data reveal fundamental step and turning points in animal movements"
   venue: "Ecological Monographs"
   year: 2026
+  date: 2026-05-01
   authors:
     - "Richard M. Gunner"
     - "Rory P. Wilson"
@@ -161,6 +168,7 @@ paper0010:
   title: "New to town: home range size, habitat selection and behavioral adaptations by urban hares"
   venue: "Wildlife Biology"
   year: 2025
+  date: 2025-10-01
   authors:
     - "Martin Mayer"
     - "Rasmus Mohr Mortensen"
@@ -179,6 +187,7 @@ paper0009:
   title: "Long-term hazel dormouse (<i>Muscardinus avellanarius</i>) population dynamics: distinct population growth periods continue for several years"
   venue: "European Journal of Wildlife Research"
   year: 2025
+  date: 2025-06-01
   authors:
     - "Rimvydas Juškaitis"
     - "Rasmus Mohr Mortensen"
@@ -196,6 +205,7 @@ paper0008:
   title: "Red deer in unconfined nature areas have smaller ranges and move less than red deer in unconfined areas"
   venue: "Science of the Total Environment"
   year: 2025
+  date: 2025-03-15
   authors:
     - "Laura Bonnefond"
     - "Martin Mayer"
@@ -216,6 +226,7 @@ paper0007:
   title: "Dune hares: Home range size and habitat selection of the European hare on a Danish island"
   venue: "Ecology and Evolution"
   year: 2024
+  date: 2024-10-XX
   authors:
     - "Majbrit Högberg Kleist"
     - "Rasmus Mohr Mortensen"
@@ -235,6 +246,7 @@ paper0006:
   title: "Human avoidance, selection for darkness and prey activity explain wolf diel activity in a highly cultivated landscape"
   venue: "Wildlife Biology"
   year: 2024
+  date: 2024-11-01
   authors:
     - "Peter Sunde"
     - "Sofie Amund Kjeldgaard"
@@ -254,6 +266,7 @@ PHD:
   title: "Territorial movement behaviour in the Eurasian beaver"
   venue: "PhD thesis in Ecology, Doctoral dissertation no. 162, University of South-Eastern Norway"
   year: 2023
+  date: 2023-06-09
   authors:
     - "Rasmus Mohr Mortensen"
   links:
@@ -270,6 +283,7 @@ paper0005:
   title: "Hazel dormouse in managed woodland select for young, dense, and species-rich tree stands"
   venue: "Forest Ecology and Management"
   year: 2022
+  date: 2022-06-01
   authors:
     - "Rasmus Mohr Mortensen"
     - "Michelle Fyrstelin Fuller"
@@ -290,6 +304,7 @@ paper0004:
   title: "Temperature and barometric pressure affect the activity intensity and movement of an endangered thermoconforming lizard"
   venue: "Ecosphere"
   year: 2022
+  date: 2022-03-01
   authors:
     - "Daniel Ariano-Sánchez"
     - "Rasmus Mohr Mortensen"
@@ -311,6 +326,7 @@ paper0003:
   title: "Aquatic habitat use in a semi-aquatic mammal: the Eurasian beaver"
   venue: "Animal Biotelemetry"
   year: 2021
+  date: 2021-08-18
   authors:
     - "Rasmus Mohr Mortensen"
     - "Stefanie Reinhardt"
@@ -331,6 +347,7 @@ paper0002:
   title: "Long-term capture and handling effects on body condition, reproduction, and survival in a semi-aquatic mammal"
   venue: "Scientific Reports"
   year: 2020
+  date: 2020-10-01
   authors:
     - "Rasmus Mohr Mortensen"
     - "Frank Rosell"
@@ -348,7 +365,7 @@ paper0001:
   title: "Escaping drought: seasonality effects on home range, movement patterns and habitat selection of the Guatemalan Beaded Lizard"
   venue: "Global Ecology and Conservation"
   year: 2020
-  date: 2020-09-XX
+  date: 2020-09-01
   authors:
     - "Daniel Ariano-Sánchez"
     - "Rasmus Mohr Mortensen"
