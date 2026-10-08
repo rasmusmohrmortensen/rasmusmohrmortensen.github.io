@@ -30,9 +30,8 @@ Publications (grouped by year):
 <hr>
 </div>
 
-<!-- Number all papers continuously, with the oldest paper as number 1 -->
-{% assign totalPapers = filtered.size %}
-{% assign currentNumber = totalPapers %}
+<!-- Number publications from oldest (1) to newest -->
+{% assign currentNumber = filtered.size %}
 
 {% for year in years %}
     <span id="{{ year.name }}" class="yearGroup">{{ year.name }}</span>
@@ -47,10 +46,7 @@ Publications (grouped by year):
             {% for p in weight.items %}
                 {%- assign pid = p[0] -%}
 
-                <li class="paperNumbered">
-                    <span class="paperNumber">{{ currentNumber }}.</span>
-                    {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor %}
-                </li>
+                {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
 
                 {% assign currentNumber = currentNumber | minus: 1 %}
             {% endfor %}
