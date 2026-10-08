@@ -1,62 +1,30 @@
 {% assign minYear = include.minYear | to_integer %}
 
-<!-- Create a list of papers filtered by flags -->
-{% assign filtered = '' | split: '' %}
+<!-- Create a list of papers filtered by flags --> {% assign filtered = '' | split: '' %}
 
-{%- for p in site.data.bibere.papers -%}
-    {%- assign numyear = p[1].year | to_integer -%}
+{%- for p in site.data.bibere.papers -%} {%- assign numyear = p[1].year | to_integer -%}
 
-    {%- if numyear >= minYear -%}
-        {%- if include.filterAuthor -%}
-            {%- if p[1].authors contains include.filterAuthor -%}
-                {% assign filtered = filtered | push: p %}
-            {%- endif -%}
-        {%- else -%}
-            {% assign filtered = filtered | push: p %}
-        {%- endif -%}
-    {%- endif -%}
-{%- endfor -%}
+{%- if numyear >= minYear -%} {%- if include.filterAuthor -%} {%- if p[1].authors contains include.filterAuthor -%} {% assign filtered = filtered | push: p %} {%- endif -%} {%- else -%} {% assign filtered = filtered | push: p %} {%- endif -%} {%- endif -%} {%- endfor -%}
 
-<!-- Sort all papers by date, newest first -->
-{% assign sortedPapers = filtered | sort: "1.date" | reverse %}
+<!-- Sort all papers by date, newest first --> {% assign sortedPapers = filtered | sort: "1.date" | reverse %}
 
-<!-- Get years for navigation -->
-{% assign years = sortedPapers | group_by_exp: "p", "p[1].year" %}
+<!-- Create year navigation --> <div> Publications (grouped by year): {%- assign navigationYears = sortedPapers | groupbyexp: "p", "p[1].year" -%} {%- for year in navigationYears -%} {%- if forloop.first == false -%}, {% endif %} <a href="#{{ year.name }}">{{ year.name }}</a> {%- endfor -%}. <hr> </div>
 
-<div>
-Publications (grouped by year):
-{%- for year in years -%}
-    {%- if forloop.first == false -%}
-    ,
-    {% endif %}
-    <a href="#{{ year.name }}">{{ year.name }}</a>
-{%- endfor -%}
-.
-<hr>
-</div>
-
-<!-- Display papers in chronological order -->
-{% assign currentNumber = 1 %}
+<!-- Display papers in chronological order --> {% assign currentNumber = 1 %} {% assign previousYear = "" %}
 
 {% for p in sortedPapers %}
 
-    {% assign currentYear = p[1].year %}
+{% assign currentYear = p[1].year %}
 
-    {% if forloop.first %}
-        <span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span>
-        <ul class="papers">
-    {% elsif currentYear != previousYear %}
-        </ul>
-        <span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span>
-        <ul class="papers">
-    {% endif %}
+{% if currentYear != previousYear %} {% unless forloop.first %} </ul> {% endunless %}
 
-    {% assign pid = p[0] %}
+<span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span> <ul class="papers"> {% endif %}
 
-    {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
+{% assign pid = p[0] %}
 
-    {% assign currentNumber = currentNumber | plus: 1 %}
-    {% assign previousYear = currentYear %}
+{% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
+
+{% assign currentNumber = currentNumber | plus: 1 %} {% assign previousYear = currentYear %}
 
 {% endfor %}
 
