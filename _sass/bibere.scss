@@ -12,8 +12,16 @@ $black:         #000000;
 }
 
 .papers {
+  list-style: none;
   padding-left: 5px;
   margin: 5px;
+}
+
+.paperNumber {
+    display: inline-block;
+    width: 30px;
+    margin-right: 8px;
+    text-align: right;
 }
 
 // .papers li {
