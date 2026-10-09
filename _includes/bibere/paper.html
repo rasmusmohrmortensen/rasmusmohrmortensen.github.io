@@ -1,35 +1,130 @@
-{%- assign paper = site.data.bibere.papers[include.pid] -%} {%- if paper -%} {%- capture cleanid -%} {{ include.pid | replace: ":", "" | replace: "-", "_" }} {%- endcapture -%}
+{%- assign paper = site.data.bibere.papers[include.pid] -%}
 
-<li id="{{ clean_id }}"><span class="paperNumber">{{ include.number }}.</span> <!-- Author --> {%- assign secondLast = paper.authors.size | minus: 1 -%} {%- for a in paper.authors -%} {%- assign author = site.data.bibere.authors[a] -%}
+{%- if paper -%}
 
-{%- if a == include.mainAuthor -%} {%- assign authorClass = "mainAuthor" -%} {%- else -%} {%- assign authorClass = "author" -%} {%- endif -%}
+  {%- capture cleanid -%}
+    {{- include.pid | replace: ":", "" | replace: "-", "_" -}}
+  {%- endcapture -%}
 
-<span class="{{ authorClass }}"> {%- if author -%} {%- if author.website -%} <a href="{{ author.website }}">{{ author.name.first }} {{ author.name.last }}</a> {%- else -%} {{ author.name.first }} {{ author.name.last }} {%- endif -%} {%- else -%} {{ a }} {%- endif -%} </span>
+  {%- assign secondLast = paper.authors.size | minus: 1 -%}
 
-{%- if forloop.last -%} {%- elsif forloop.index == secondLast -%} , and&nbsp; {%- else -%} ,&nbsp; {%- endif -%} {%- endfor -%}
+  <li id="{{ cleanid }}">
+    <span class="paperNumber">{{ include.number }}.</span>
 
-<!-- Year --> (<span class="year">{{ paper.year }}</span>)
+    <!-- Authors -->
+    {%- for a in paper.authors -%}
+      {%- assign author = site.data.bibere.authors[a] -%}
 
-<!-- Title --> {%- assign cleantitle = paper.title | replace: "}", '' | stripnewlines -%} <span class="title">{{ clean_title | replace: "{", '' }}</span>
+      {%- if a == include.mainAuthor -%}
+        {%- assign authorClass = "mainAuthor" -%}
+      {%- else -%}
+        {%- assign authorClass = "author" -%}
+      {%- endif -%}
 
-<!-- Venue --> <span class="venue"> {%- assign venue = site.data.bibere.venues[paper.venue] -%} {%- if paper.type == "Thesis" -%}{%- endif -%} {%- if paper.type == "TechReport" -%} Technical Report,&nbsp; {%- endif -%} {%- if venue -%} {{ venue.name }} {%- else -%} {{ paper.venue }} {%- endif -%}: </span>
+      <span class="{{ authorClass }}">
+        {%- if author -%}
+          {%- if author.website -%}
+            <a href="{{ author.website }}">{{ author.name.first }} {{ author.name.last }}</a>
+          {%- else -%}
+            {{ author.name.first }} {{ author.name.last }}
+          {%- endif -%}
+        {%- else -%}
+          {{ a }}
+        {%- endif -%}
+      </span>
 
-<!-- Tag --> <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
+      {%- if forloop.last -%}
+      {%- elsif forloop.index == secondLast -%}
+        , and&nbsp;
+      {%- else -%}
+        ,&nbsp;
+      {%- endif -%}
+    {%- endfor -%}
 
-{%- for tag in paper.extraTags -%} <span class="tag_{{ tag }} tag label label-default">{{ tag }}</span> {%- endfor -%}
+    <!-- Year -->
+    (<span class="year">{{ paper.year }}</span>)
 
-<!-- Notes --> {%- if paper.emphasis -%} <span class="emphasisNote">{{ paper.emphasis }}</span> {%- endif -%}
+    <!-- Title -->
+    {%- assign cleantitle = paper.title | replace: "}", "" | stripnewlines -%}
+    <span class="title">{{ cleantitle | replace: "{", "" }}</span>
 
-{%- if paper.note -%} <span class="note">{{ paper.note }}</span> {%- endif -%}
+    <!-- Venue -->
+    <span class="venue">
+      {%- assign venue = site.data.bibere.venues[paper.venue] -%}
 
-<!-- Links --> [ {%- if paper.links -%} {%- for item in paper.links -%} {% assign linkfirstchar = item.link | slice:0,1 %} {%- if linkfirstchar == "/" and site.bibere.filebaseurl -%} &nbsp;<a href="{{ site.bibere.filebaseurl }}{{item.link}}">{{item.name}}</a>, {%- else -%} &nbsp;<a href="{{item.link}}">{{item.name}}</a>, {%- endif -%} {%- endfor -%} {%- endif -%}
+      {%- if paper.type == "TechReport" -%}
+        Technical Report,&nbsp;
+      {%- endif -%}
 
-<!-- Abstract --> {%- if paper.abstract -%} <a class="collapse-clicker" onclick="$('#{{ cleanid }}abstract').slideToggle(200)">Abstract</a>, {%- endif -%}
+      {%- if venue -%}
+        {{ venue.name }}
+      {%- else -%}
+        {{ paper.venue }}
+      {%- endif -%}:
+    </span>
 
-<!-- BibTex --> <a class="collapse-clicker" onclick="$('#{{ cleanid }}bibtex').slideToggle(200)">BibTex</a> ]
+    <!-- Publication type -->
+    <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
 
-{%- if paper.abstract -%} <div class="collapse" id="{{ cleanid }}abstract"> <div class="panel panel-primary"> <div class="panel-body details-panel"> {{- paper.abstract -}} </div> </div> </div> {%- endif -%}
+    {%- for tag in paper.extraTags -%}
+      <span class="tag_{{ tag }} tag label label-default">{{ tag }}</span>
+    {%- endfor -%}
 
-<div class="collapse" id="{{ cleanid }}bibtex"> <div class="panel panel-info"> <pre class="panel-body details-panel"> {%- include bibere/bibtex.html pid=include.pid -%} </pre> </div> </div> </li>
+    <!-- Notes -->
+    {%- if paper.emphasis -%}
+      <span class="emphasisNote">{{ paper.emphasis }}</span>
+    {%- endif -%}
 
-{%- else -%} <p class="text-danger">Paper with id {{include.pid}} not found!</p> {{ error.standard_error }} {%- endif -%}
+    {%- if paper.note -%}
+      <span class="note">{{ paper.note }}</span>
+    {%- endif -%}
+
+    <!-- Links -->
+    [
+    {%- if paper.links -%}
+      {%- for item in paper.links -%}
+        {%- assign linkfirstchar = item.link | slice: 0, 1 -%}
+
+        {%- if linkfirstchar == "/" and site.bibere.filebaseurl -%}
+          &nbsp;<a href="{{ site.bibere.filebaseurl }}{{ item.link }}">{{ item.name }}</a>,
+        {%- else -%}
+          &nbsp;<a href="{{ item.link }}">{{ item.name }}</a>,
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+
+    <!-- Abstract -->
+    {%- if paper.abstract -%}
+      <a class="collapse-clicker"
+         onclick="$('#{{ cleanid }}abstract').slideToggle(200)">Abstract</a>,
+    {%- endif -%}
+
+    <!-- BibTeX -->
+    <a class="collapse-clicker"
+       onclick="$('#{{ cleanid }}bibtex').slideToggle(200)">BibTeX</a>
+    ]
+
+    <!-- Abstract content -->
+    {%- if paper.abstract -%}
+      <div class="collapse" id="{{ cleanid }}abstract">
+        <div class="panel panel-primary">
+          <div class="panel-body details-panel">
+            {{- paper.abstract -}}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    <!-- BibTeX content -->
+    <div class="collapse" id="{{ cleanid }}bibtex">
+      <div class="panel panel-info">
+        <pre class="panel-body details-panel">{%- include bibere/bibtex.html pid=include.pid -%}</pre>
+      </div>
+    </div>
+  </li>
+
+{%- else -%}
+
+  <p class="text-danger">Paper with id {{ include.pid }} not found!</p>
+
+{%- endif -%}
