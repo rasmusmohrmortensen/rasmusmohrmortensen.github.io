@@ -8,7 +8,7 @@
 
 <!-- Sort all papers by date, newest first --> {% assign sortedPapers = filtered | sort: "1.date" | reverse %}
 
-<!-- Create year navigation --> <div> Publications (grouped by year): {%- assign navigationYears = sortedPapers | groupbyexp: "p", "p[1].year" -%} {%- for year in navigationYears -%} {%- if forloop.first == false -%}, {% endif %} <a href="#{{ year.name }}">{{ year.name }}</a> {%- endfor -%}. <hr> </div>
+<!-- Create year navigation --> <div> Publications (grouped by year): {%- assign navigationYears = sortedPapers | group_by_exp: "p", "p[1].year" -%} {%- for year in navigationYears -%} {%- if forloop.first == false -%}, {% endif %} <a href="#{{ year.name }}">{{ year.name }}</a> {%- endfor -%}. <hr> </div>
 
 <!-- Display papers in chronological order --> {% assign currentNumber = 1 %} {% assign previousYear = "" %}
 
