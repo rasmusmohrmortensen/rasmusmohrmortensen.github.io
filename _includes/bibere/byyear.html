@@ -1,31 +1,59 @@
 {% assign minYear = include.minYear | to_integer %}
+{% assign filtered = '' | split: '' %}
 
-<!-- Create a list of papers filtered by flags --> {% assign filtered = '' | split: '' %}
+<!-- Filter papers by year and author -->
+{% for p in site.data.bibere.papers %}
+  {% assign numyear = p[1].year | to_integer %}
 
-{%- for p in site.data.bibere.papers -%} {%- assign numyear = p[1].year | to_integer -%}
-
-{%- if numyear >= minYear -%} {%- if include.filterAuthor -%} {%- if p[1].authors contains include.filterAuthor -%} {% assign filtered = filtered | push: p %} {%- endif -%} {%- else -%} {% assign filtered = filtered | push: p %} {%- endif -%} {%- endif -%} {%- endfor -%}
-
-<!-- Sort all papers by date, newest first --> {% assign sortedPapers = filtered | sort: "1.date" | reverse %}
-
-<!-- Create year navigation --> <div> Publications (grouped by year): {%- assign navigationYears = sortedPapers | group_by_exp: "p", "p[1].year" -%} {%- for year in navigationYears -%} {%- if forloop.first == false -%}, {% endif %} <a href="#{{ year.name }}">{{ year.name }}</a> {%- endfor -%}. <hr> </div>
-
-<!-- Display papers in chronological order --> {% assign currentNumber = 1 %} {% assign previousYear = "" %}
-
-{% for p in sortedPapers %}
-
-{% assign currentYear = p[1].year %}
-
-{% if currentYear != previousYear %} {% unless forloop.first %} </ul> {% endunless %}
-
-<span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span> <ul class="papers"> {% endif %}
-
-{% assign pid = p[0] %}
-
-{% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
-
-{% assign currentNumber = currentNumber | plus: 1 %} {% assign previousYear = currentYear %}
-
+  {% if numyear >= minYear %}
+    {% if include.filterAuthor %}
+      {% if p[1].authors contains include.filterAuthor %}
+        {% assign filtered = filtered | push: p %}
+      {% endif %}
+    {% else %}
+      {% assign filtered = filtered | push: p %}
+    {% endif %}
+  {% endif %}
 {% endfor %}
 
-</ul>
+<!-- Sort papers by date, newest first -->
+{% assign sortedPapers = filtered | sort: "1.date" | reverse %}
+
+<!-- Create year navigation -->
+<div>
+  Publications (grouped by year):
+  {% assign navigationYears = sortedPapers | group_by_exp: "p", "p[1].year" %}
+  {% for year in navigationYears %}
+    {% if forloop.first == false %}, {% endif %}
+    <a href="#{{ year.name }}">{{ year.name }}</a>
+  {% endfor %}.
+  <hr>
+</div>
+
+<!-- Display papers grouped by year -->
+{% assign currentNumber = 1 %}
+{% assign previousYear = "" %}
+
+{% for p in sortedPapers %}
+  {% assign currentYear = p[1].year %}
+
+  {% if currentYear != previousYear %}
+    {% unless forloop.first %}
+      </ul>
+    {% endunless %}
+
+    <span id="{{ currentYear }}" class="yearGroup">{{ currentYear }}</span>
+    <ul class="papers">
+  {% endif %}
+
+  {% assign pid = p[0] %}
+
+  {% include bibere/paper.html pid=pid mainAuthor=include.mainAuthor number=currentNumber %}
+
+  {% assign currentNumber = currentNumber | plus: 1 %}
+  {% assign previousYear = currentYear %}
+{% endfor %}
+
+{% if sortedPapers.size > 0 %}
+  </ul>
+{% endif %}
