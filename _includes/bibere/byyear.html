@@ -1,9 +1,9 @@
-{% assign minYear = include.minYear | to_integer %}
+{% assign minYear = include.minYear | plus: 0 %}
 {% assign filtered = '' | split: '' %}
 
 <!-- Filter papers by year and author -->
 {% for p in site.data.bibere.papers %}
-  {% assign numyear = p[1].year | to_integer %}
+  {% assign numyear = p[1].year | plus: 0 %}
 
   {% if numyear >= minYear %}
     {% if include.filterAuthor %}
