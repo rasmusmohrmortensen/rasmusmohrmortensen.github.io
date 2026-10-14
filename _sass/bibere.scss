@@ -160,3 +160,13 @@ $black:         #000000;
 .details-panel-body:after {
   content: "";
 } */
+.papers li {
+  display: list-item;
+}
+
+.papers li .author,
+.papers li .mainAuthor,
+.papers li .year,
+.papers li .title {
+  display: inline !important;
+}
