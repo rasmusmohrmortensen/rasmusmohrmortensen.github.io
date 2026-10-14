@@ -5,8 +5,8 @@ paper0017:
   year: 2026
   date: 2026-10-15
   authors:
-    - "Dário Hipólito"
-    - "Rasmus Mohr Mortensen"
+    - "Dário Hipólito*"
+    - "Rasmus Mohr Mortensen*"
     - "Michael Schulte"
     - "Gonçalo Ferrão da Costa"
     - "Patricia Teixeira"
@@ -207,9 +207,9 @@ paper0008:
   year: 2025
   date: 2025-03-15
   authors:
-    - "Laura Bonnefond"
-    - "Martin Mayer"
-    - "Rasmus Mohr Mortensen"
+    - "Laura Bonnefond*"
+    - "Martin Mayer*"
+    - "Rasmus Mohr Mortensen*"
     - "Lars Haugaard"
     - "Peter Sunde"
   links:
