@@ -7,7 +7,6 @@
         <!-- Author -->
         {%- for a in paper.authors -%}
             {%- assign author = site.data.bibere.authors[a] -%}
-            {%- if author -%}
                 {%- assign authorClass = "mainAuthor" -%}
             {%- else -%}
                 {%- assign authorClass = "author" -%}
