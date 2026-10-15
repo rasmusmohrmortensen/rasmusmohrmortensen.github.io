@@ -4,7 +4,7 @@ mortensen:
     last: "Mortensen"
   website: "http://rasmusmohrmortensen.github.io"
 
-mortensen*:
+mortensen-shared:
   name:
     first: "Rasmus Mohr"
     last: "Mortensen*"
