@@ -1,10 +1,16 @@
+mortensen-shared:
+  name:
+    first: "Rasmus Mohr"
+    last: "Mortensen*"
+  website: "http://rasmusmohrmortensen.github.io"
+
 mortensen:
   name:
     first: "Rasmus Mohr"
     last: "Mortensen"
   website: "http://rasmusmohrmortensen.github.io"
 
-mortensen-shared:
+mortensen-shared2:
   name:
     first: "Rasmus Mohr"
     last: "Mortensen*"
