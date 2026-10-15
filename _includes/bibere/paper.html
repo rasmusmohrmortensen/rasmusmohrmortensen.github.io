@@ -7,11 +7,13 @@
         <!-- Author -->
         {%- for a in paper.authors -%}
             {%- assign author = site.data.bibere.authors[a] -%}
-            {%- if a == include.mainAuthor -%}
-                {%- assign authorClass = "mainAuthor" -%}
-            {%- else -%}
-                {%- assign authorClass = "author" -%}
-            {%- endif -%}
+            {%- assign mainAuthorStar = include.mainAuthor | append: "*" -%}
+
+{%- if a == include.mainAuthor or a == mainAuthorStar -%}
+  {%- assign authorClass = "mainAuthor" -%}
+{%- else -%}
+  {%- assign authorClass = "author" -%}
+{%- endif -%}
             <span class="{{ authorClass }}">
             {%- if author -%}
                 {%- if author.website -%}
