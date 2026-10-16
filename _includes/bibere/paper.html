@@ -27,7 +27,11 @@
             </span>
             {%- unless forloop.last -%}
     {%- if forloop.rindex == 2 -%}
-        , and&nbsp;
+        {%- if forloop.length == 2 -%}
+            &nbsp;and&nbsp;
+        {%- else -%}
+            , and&nbsp;
+        {%- endif -%}
     {%- else -%}
         ,&nbsp;
     {%- endif -%}
