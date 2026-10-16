@@ -64,16 +64,17 @@
         {%- endif -%}
         <!-- Links -->
         [
-        {%- if paper.links -%}
-            {%- for item in paper.links -%} 
-                {% assign link_first_char = item.link | slice:0,1 %}
-                {%- if link_first_char == "/" and site.bibere.file_base_url -%}
-                    <a href="{{ site.bibere.file_base_url }}{{item.link}}">{{item.name}}</a>,
-                {%- else -%}
-                    <a href="{{item.link}}">{{item.name}}</a>
-                {%- endif -%}
-            {%- endfor -%}
+{%- if paper.links -%}
+    {%- for item in paper.links %}
+        {% assign link_first_char = item.link | slice: 0, 1 %}
+        {%- if link_first_char == "/" and site.bibere.file_base_url -%}
+            <a href="{{ site.bibere.file_base_url }}{{ item.link }}">{{ item.name }}</a>
+        {%- else -%}
+            <a href="{{ item.link }}">{{ item.name }}</a>
         {%- endif -%}
+        {%- unless forloop.last -%}, {% endunless -%}
+    {%- endfor -%}
+{%- endif -%}
         <!-- Abstract -->
         {%- if paper.abstract -%}
         <a class="collapse-clicker" onclick="$('#{{ clean_id }}_abstract').slideToggle(200)">Abstract</a>
