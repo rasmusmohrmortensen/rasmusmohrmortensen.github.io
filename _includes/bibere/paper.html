@@ -41,7 +41,7 @@
         (<span class="year">{{- paper.year -}}</span>)&nbsp;{%- assign clean_title = paper.title | replace: "}", '' | strip_newlines -%}<span class="title">{{- clean_title | replace: "{", '' -}}</span>
         <!-- Venue -->
         <span class="venue">
-            {%- assign venue = site.data.bibere.venues[paper.venue] -%}
+            {%- assign venue = site.data.bibere.venues[paper.venue -%}
             {%- if paper.type == "Thesis" -%}{%- endif -%}
             {%- if paper.type == "TechReport" -%}Technical Report,&nbsp;{%- endif -%}
             {%- if venue -%}
@@ -79,7 +79,7 @@
         <a class="collapse-clicker" onclick="$('#{{ clean_id }}_abstract').slideToggle(200)">Abstract</a>,
         {%- endif -%}
         {% comment %}<!-- BibTex -->
-        <a class="collapse-clicker" onclick="$('#{{ clean_id }}_bibtex').slideToggle(200)">BibTex</a> ]{% endcomment %}
+        <a class="collapse-clicker" onclick="$('#{{ clean_id }}_bibtex').slideToggle(200)">BibTex</a>{% endcomment %}]
         {%- if paper.abstract -%}
         <div class="collapse" id="{{ clean_id }}_abstract">
         <div class="panel panel-primary">
