@@ -39,15 +39,15 @@
             {%- if paper.type == "Thesis" -%}{%- endif -%}
             {%- if paper.type == "TechReport" -%}Technical Report,&nbsp;{%- endif -%}
             {%- if venue -%}
-                {{ venue.name }}
+                {{- venue.name -}}
             {%- else -%}
-                {{ paper.venue }}
+                {{- paper.venue -}}
             {%- endif -%}:
         </span>
         <!-- Tag -->
-        <span class="tag_{{ paper.type }} tag label label-default">{{ paper.type }}</span>
+        <span class="tag_{{ paper.type }} tag label label-default">{{- paper.type -}}</span>
         {%- for tag in paper.extraTags -%}
-            <span class="tag_{{ tag }} tag label label-default">{{ tag }}</span>
+            <span class="tag_{{ tag }} tag label label-default">{{- tag -}}</span>
         {%- endfor -%}
         <!-- Notes -->
         {%- if paper.emphasis -%}
