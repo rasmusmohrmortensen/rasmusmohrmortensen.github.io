@@ -25,11 +25,13 @@
                 {{ a }}
             {%- endif -%}
             </span>
-            {%- if forloop.last == true -%}
-                
-            {%- else -%}
-                ,&nbsp;
-            {%- endif -%}
+            {%- unless forloop.last -%}
+    {%- if forloop.rindex == 2 -%}
+        , and&nbsp;
+    {%- else -%}
+        ,&nbsp;
+    {%- endif -%}
+{%- endunless -%}
         {%- endfor -%}
          <!-- Year and Title -->
         (<span class="year">{{- paper.year -}}</span>)&nbsp;{%- assign clean_title = paper.title | replace: "}", '' | strip_newlines -%}<span class="title">{{- clean_title | replace: "{", '' -}}</span>
