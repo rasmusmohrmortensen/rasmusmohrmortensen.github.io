@@ -70,13 +70,13 @@
                 {%- if link_first_char == "/" and site.bibere.file_base_url -%}
                     &nbsp;<a href="{{ site.bibere.file_base_url }}{{item.link}}">{{item.name}}</a>,
                 {%- else -%}
-                    &nbsp;<a href="{{item.link}}">{{item.name}}</a>,
+                    &nbsp;<a href="{{item.link}}">{{item.name}}</a>
                 {%- endif -%}
             {%- endfor -%}
         {%- endif -%}
         <!-- Abstract -->
         {%- if paper.abstract -%}
-        <a class="collapse-clicker" onclick="$('#{{ clean_id }}_abstract').slideToggle(200)">Abstract</a>,
+        <a class="collapse-clicker" onclick="$('#{{ clean_id }}_abstract').slideToggle(200)">Abstract</a>
         {%- endif -%}
         {% comment %}<!-- BibTex -->
         <a class="collapse-clicker" onclick="$('#{{ clean_id }}_bibtex').slideToggle(200)">BibTex</a>{% endcomment %}]
